@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About</title>
+    <title>Markdown Beginner</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Here, I got to set up this site to share the dots with your guys. Hope you can get something nice here~">
-    <link rel="canonical" href="http://www.surfacew.com/about/">
+    <link rel="canonical" href="http://www.surfacew.com/jekyll/freshman/starter/2014/07/29/jekll-starter/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -56,15 +56,173 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>About</h1>
+    <h1>Markdown Beginner</h1>
+    <p class="meta">Jul 29, 2014</p>
   </header>
 
   <article class="post-content">
-  <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+  <p>Basic Markdown Language Signs</p>
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<p>—————————— Standard Version ——————————</p>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<p>This version is the standard markdown sytax.</p>
+
+<h2 id="the-code-block">The Code block</h2>
+
+<p>This is a normal paragraph.</p>
+
+<pre><code>This is a code block with a Tab.
+this is a
+this is b
+this is c
+</code></pre>
+
+<p>Here is an example of AppleScript:</p>
+
+<pre><code>tell application "Foo"
+    beep
+end tell
+</code></pre>
+
+<h2 id="paragraph">Paragraph</h2>
+
+<p>This is paragraph A.</p>
+
+<p>This is paragraph B.</p>
+
+<h2 id="divider">Divider</h2>
+
+<p>This is the divide line.</p>
+
+<hr />
+
+<h2 id="headings">Headings</h2>
+
+<h1 id="level-1">Level 1</h1>
+
+<h2 id="level-2">Level 2</h2>
+
+<h3 id="level-3">Level 3</h3>
+
+<h4 id="level-4">Level 4</h4>
+
+<h5 id="level-5">Level 5</h5>
+
+<h2 id="block-quotes">Block-quotes</h2>
+
+<blockquote>
+  <p>Youth is not a time of life, it is a state of mind.</p>
+</blockquote>
+
+<blockquote>
+  <p>This is the first level of quoting.</p>
+
+  <blockquote>
+    <p>This is nested blockquote.</p>
+  </blockquote>
+
+  <p>Back to the first level.</p>
+</blockquote>
+
+<h2 id="styling-texts">Styling Texts</h2>
+
+<p>This is the italic : <em>JavaScript Definitive Guide</em></p>
+
+<p>This is the bold : <strong>This is emphasis</strong></p>
+
+<h2 id="lists">Lists</h2>
+
+<ol>
+  <li>This is ordered list</li>
+  <li></li>
+  <li></li>
+</ol>
+
+<ul>
+  <li></li>
+  <li></li>
+  <li>This is the first level
+    <ul>
+      <li>This is the second level
+        <ul>
+          <li>This is the third level</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>The same as *</li>
+  <li>
+    <p>The same as *</p>
+  </li>
+  <li>
+    <p>A list item with a blockquote:</p>
+
+    <blockquote>
+      <p>This is a blockquote
+inside a list item.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="links">Links</h2>
+<p><a href="http://www.github.com">Visit Github!</a></p>
+
+<p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from
+<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
+
+<h2 id="fenced-code-blocks">Fenced Code Blocks</h2>
+<p>Here is an example:</p>
+
+<p><code>
+function (b) {
+	this.a = b;
+}
+</code></p>
+
+<p>—————————— Jekyll Version ——————————</p>
+
+<h2 id="syntax-highlight">Syntax HighLight</h2>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="lineno">2</span>   <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="lineno">3</span> <span class="k">end</span>
+<span class="lineno">4</span> <span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
+<span class="lineno">5</span> <span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// This is a javascript function</span>
+<span class="kd">function</span> <span class="nx">getName</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+	<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- This is a html demo --&gt;</span>
+<span class="nt">&lt;h1&gt;</span>This gonna be cool~<span class="nt">&lt;/h1&gt;</span></code></pre></div>
+
+<p>—————————— Github Version ——————————</p>
+
+<h2 id="strike-through">Strike Through</h2>
+<p>~~Strike Me Through~~</p>
+
+<h2 id="inline-code">inline code</h2>
+<p>This method is<code>A.setName();</code>.</p>
+
+<h2 id="syntax-highlighting">Syntax highlighting</h2>
+
+<p><code>JavaScript
+// Insert some code here
+</code></p>
+
+<h2 id="extra-link">Extra Link</h2>
+<p><a href="http://www.google.com">http://www.google.com</a></p>
+
+<h2 id="tables">Tables</h2>
+<p>| name | age | sex |
+| yeqingnan | 12 | boy |</p>
+
+<h2 id="image">Image</h2>
+<p><img src="/image/logo.svg" alt="logo_name" /></p>
+
 
   </article>
 

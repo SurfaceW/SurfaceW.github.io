@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Hello, World!"
+date:   2014-07-29 00:12:11
+categories: jekyll update
+---
+
+## 吃了么，世界? —— FE的问候
+
+
+> Hey, guys, it is a nice day ~ 
+> ———SurfaceW
+
+This is the first time to use such cool jekyll with Github Pages to work on a free Blog Development.Static file can still boost lots of inspiration on FE visual design.I think it's for me to do well with it. 
+
+Thanks Github, jekyll, anyway~
+
+Welcome to visit this site with : [click me ~](http://www.surfacew.com)
+

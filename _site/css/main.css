@@ -9,11 +9,11 @@
 html, body { height: 100%; }
 
 body {
+  background-color: #fdfdfd;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
   font-weight: 300;
-  background-color: #fdfdfd;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }

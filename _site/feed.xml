@@ -2,217 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SurfaceW</title>
-    <description>Here, I got to set up this site to share the dots with your guys. Hope you can get something nice here~</description>
+    <description>Little Dots accumulated to make a Difference.</description>
     <link>http://www.surfacew.com/</link>
     <atom:link href="http://www.surfacew.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 29 Jul 2014 02:58:50 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Jul 2014 02:58:50 +0800</lastBuildDate>
+    <pubDate>Sat, 01 Nov 2014 22:44:35 +0800</pubDate>
+    <lastBuildDate>Sat, 01 Nov 2014 22:44:35 +0800</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
-        <title>Markdown Beginner</title>
-        <description>&lt;p&gt;Basic Markdown Language Signs&lt;/p&gt;
-
-&lt;p&gt;—————————— Standard Version ——————————&lt;/p&gt;
-
-&lt;p&gt;This version is the standard markdown sytax.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-code-block&quot;&gt;The Code block&lt;/h2&gt;
-
-&lt;p&gt;This is a normal paragraph.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;This is a code block with a Tab.
-this is a
-this is b
-this is c
+        <title>关于自我</title>
+        <description>&lt;pre&gt;&lt;code&gt;我，希望自己是一名摄影师 —— 能够用自己独特的视角，捕捉生活中美好的画面！
+我，希望自己是一名平面设计师 —— 能够在空白的纸面中点染美妙的图案！
+我，希望自己是一名复杂系统的设计师 —— 能够设计出令这个世界更美的秩序！
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+&lt;p&gt;而我现在，是一名 Web 前端工程师，我希望自己能够尽可能让 Web 变得更美，让信息的展现、传递和交互的方式变得更和谐。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;tell application &quot;Foo&quot;
-    beep
-end tell
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;paragraph&quot;&gt;Paragraph&lt;/h2&gt;
-
-&lt;p&gt;This is paragraph A.&lt;/p&gt;
-
-&lt;p&gt;This is paragraph B.&lt;/p&gt;
-
-&lt;h2 id=&quot;divider&quot;&gt;Divider&lt;/h2&gt;
-
-&lt;p&gt;This is the divide line.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;headings&quot;&gt;Headings&lt;/h2&gt;
-
-&lt;h1 id=&quot;level-1&quot;&gt;Level 1&lt;/h1&gt;
-
-&lt;h2 id=&quot;level-2&quot;&gt;Level 2&lt;/h2&gt;
-
-&lt;h3 id=&quot;level-3&quot;&gt;Level 3&lt;/h3&gt;
-
-&lt;h4 id=&quot;level-4&quot;&gt;Level 4&lt;/h4&gt;
-
-&lt;h5 id=&quot;level-5&quot;&gt;Level 5&lt;/h5&gt;
-
-&lt;h2 id=&quot;block-quotes&quot;&gt;Block-quotes&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Youth is not a time of life, it is a state of mind.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is the first level of quoting.&lt;/p&gt;
-
-  &lt;blockquote&gt;
-    &lt;p&gt;This is nested blockquote.&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;Back to the first level.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;styling-texts&quot;&gt;Styling Texts&lt;/h2&gt;
-
-&lt;p&gt;This is the italic : &lt;em&gt;JavaScript Definitive Guide&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This is the bold : &lt;strong&gt;This is emphasis&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;This is ordered list&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;This is the first level
-    &lt;ul&gt;
-      &lt;li&gt;This is the second level
-        &lt;ul&gt;
-          &lt;li&gt;This is the third level&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The same as *&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The same as *&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A list item with a blockquote:&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;This is a blockquote
-inside a list item.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.github.com&quot;&gt;Visit Github!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I get 10 times more traffic from &lt;a href=&quot;http://google.com/&quot; title=&quot;Google&quot;&gt;Google&lt;/a&gt; than from
-&lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt; or &lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;fenced-code-blocks&quot;&gt;Fenced Code Blocks&lt;/h2&gt;
-&lt;p&gt;Here is an example:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-function (b) {
-	this.a = b;
-}
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;—————————— Jekyll Version ——————————&lt;/p&gt;
-
-&lt;h2 id=&quot;syntax-highlight&quot;&gt;Syntax HighLight&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// This is a javascript function&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- This is a html demo --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This gonna be cool~&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;—————————— Github Version ——————————&lt;/p&gt;
-
-&lt;h2 id=&quot;strike-through&quot;&gt;Strike Through&lt;/h2&gt;
-&lt;p&gt;~~Strike Me Through~~&lt;/p&gt;
-
-&lt;h2 id=&quot;inline-code&quot;&gt;inline code&lt;/h2&gt;
-&lt;p&gt;This method is&lt;code&gt;A.setName();&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;syntax-highlighting&quot;&gt;Syntax highlighting&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;JavaScript
-// Insert some code here
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;extra-link&quot;&gt;Extra Link&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;http://www.google.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-&lt;p&gt;| name | age | sex |
-| yeqingnan | 12 | boy |&lt;/p&gt;
-
-&lt;h2 id=&quot;image&quot;&gt;Image&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/image/logo.svg&quot; alt=&quot;logo_name&quot; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&quot;/img/articles/2014-11-01-intro.JPG&quot; alt=&quot;Intro&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 29 Jul 2014 09:12:11 +0800</pubDate>
-        <link>http://www.surfacew.com/jekyll/freshman/starter/2014/07/29/jekll-starter/</link>
-        <guid isPermaLink="true">http://www.surfacew.com/jekyll/freshman/starter/2014/07/29/jekll-starter/</guid>
+        <pubDate>Sat, 01 Nov 2014 00:00:00 +0800</pubDate>
+        <link>http://www.surfacew.com/me/2014/11/01/Self%20Introduction/</link>
+        <guid isPermaLink="true">http://www.surfacew.com/me/2014/11/01/Self%20Introduction/</guid>
         
-        <category>jekyll markdown github</category>
-        
-        
-        <category>jekyll</category>
-        
-        <category>freshman</category>
-        
-        <category>starter</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello, World!</title>
-        <description>&lt;h2 id=&quot;fe&quot;&gt;吃了么，世界? —— FE的问候&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Hey, guys, it is a nice day ~ 
-———SurfaceW&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is the first time to use such cool jekyll with Github Pages to work on a free Blog Development.Static file can still boost lots of inspiration on FE visual design.I think it’s for me to do well with it. &lt;/p&gt;
-
-&lt;p&gt;Thanks Github, jekyll, anyway~&lt;/p&gt;
-
-&lt;p&gt;Welcome to visit this site with : &lt;a href=&quot;http://www.surfacew.com&quot;&gt;click me ~&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 29 Jul 2014 08:12:11 +0800</pubDate>
-        <link>http://www.surfacew.com/jekyll/update/2014/07/29/2014-07-29-%E5%90%83%E4%BA%86%E4%B9%88%EF%BC%8C%E4%B8%96%E7%95%8C%3F/</link>
-        <guid isPermaLink="true">http://www.surfacew.com/jekyll/update/2014/07/29/2014-07-29-%E5%90%83%E4%BA%86%E4%B9%88%EF%BC%8C%E4%B8%96%E7%95%8C%3F/</guid>
+        <category>me</category>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>me</category>
         
       </item>
     

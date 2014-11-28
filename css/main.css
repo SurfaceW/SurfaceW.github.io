@@ -50,7 +50,7 @@ a:visited { color: #4A90E2; }
   /* border-bottom: 1px solid #e8e8e8; */
   min-height: 200px;
   /*background-color: #4A90E2;*/
-  background:url('../img/index/01.jpg') no-repeat center center;
+  /*background:url('../img/index/01.jpg') no-repeat center center;*/
   -webkit-background-size:cover;
   -moz-background-size:cover;
   -o-background-size:cover;

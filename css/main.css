@@ -264,7 +264,7 @@ a:visited { color: #4A90E2; }
   font-size: 0.9em;
   opacity: .6;
   letter-spacing: -1px;
-  font-style: italic;
+  /*font-style: italic;*/
   margin: 30px 0;
 }
 

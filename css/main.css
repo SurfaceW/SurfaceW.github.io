@@ -63,6 +63,7 @@ a:visited { color: #4A90E2; }
   color: gray;
   font-size: 0.9em;
   margin-top: 6px;
+  padding-right: 10px;
 }
 
 .site-title,

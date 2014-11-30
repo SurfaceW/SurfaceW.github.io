@@ -3,6 +3,7 @@ layout: post
 title:  "关于自我"
 date:   2014-11-01
 categories: Me
+description: That's ME.
 tag: me
 ---
 

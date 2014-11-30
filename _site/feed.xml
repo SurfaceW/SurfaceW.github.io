@@ -5,9 +5,138 @@
     <description>Little Dots accumulated to make a Difference.</description>
     <link>http://www.surfacew.com/</link>
     <atom:link href="http://www.surfacew.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 28 Nov 2014 23:05:15 +0800</pubDate>
-    <lastBuildDate>Fri, 28 Nov 2014 23:05:15 +0800</lastBuildDate>
+    <pubDate>Sun, 30 Nov 2014 23:11:03 +0800</pubDate>
+    <lastBuildDate>Sun, 30 Nov 2014 23:11:03 +0800</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
+    
+      <item>
+        <title>JavaScript 一些学习建议</title>
+        <description>&lt;h1 id=&quot;js&quot;&gt;JS学习的若干建议&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;我自己学习 JS 所总结的一些经验，分享给大家&lt;strong&gt;参考&lt;/strong&gt;。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;准备阶段：&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;What / Why / How？&lt;/em&gt; 的技术三问。&lt;/li&gt;
+  &lt;li&gt;JS 这门语言能够用来干啥？
+    &lt;ul&gt;
+      &lt;li&gt;实现这些功能类似的而技术有哪些？但相比起来，为什么我要学习 JS？&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JS 学习和使用的意义是什么？有何用？&lt;/li&gt;
+  &lt;li&gt;JS 学习之前，我的获取知识的渠道有哪些？它们是&lt;strong&gt;最优&lt;/strong&gt;的么？
+    &lt;ul&gt;
+      &lt;li&gt;书籍？视频？网页？教程？培训 …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;定位我的学习目标。
+    &lt;ul&gt;
+      &lt;li&gt;Basic Level / Core Level / Advanced Level / Industry Level / Master Level&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;基础与核心主题：&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JS 的语言核心的学习
+    &lt;ul&gt;
+      &lt;li&gt;JS 特性&lt;/li&gt;
+      &lt;li&gt;词法结构 / 语法结构&lt;/li&gt;
+      &lt;li&gt;类型 / 值 / 变量&lt;/li&gt;
+      &lt;li&gt;语句&lt;/li&gt;
+      &lt;li&gt;对象&lt;/li&gt;
+      &lt;li&gt;数组&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;函数&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;类和模块&lt;/li&gt;
+      &lt;li&gt;正则表达式和匹配&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JS 的重要特征的强调
+    &lt;ul&gt;
+      &lt;li&gt;词法作用域&lt;/li&gt;
+      &lt;li&gt;闭包&lt;/li&gt;
+      &lt;li&gt;函式编程&lt;/li&gt;
+      &lt;li&gt;匿名自调用函数&lt;/li&gt;
+      &lt;li&gt;回调函数&lt;/li&gt;
+      &lt;li&gt;柯里化函数&lt;/li&gt;
+      &lt;li&gt;高阶函数&lt;/li&gt;
+      &lt;li&gt;原型继承&lt;/li&gt;
+      &lt;li&gt;类工厂函数&lt;/li&gt;
+      &lt;li&gt;事件队列&lt;/li&gt;
+      &lt;li&gt;异步事件 Deffered / Promise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JS 的 API 的学习
+    &lt;ul&gt;
+      &lt;li&gt;核心 API
+        &lt;ul&gt;
+          &lt;li&gt;Array / Date /  RegExp&lt;/li&gt;
+          &lt;li&gt;事件系统&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;客户端 API
+        &lt;ul&gt;
+          &lt;li&gt;Window / Document / DOM  / CSS / Cookie &lt;/li&gt;
+          &lt;li&gt;HTML5 API
+            &lt;ul&gt;
+              &lt;li&gt;LocalStorage / SessionStorage / Canvas …&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Node API&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JS 的主要框架的应用
+    &lt;ul&gt;
+      &lt;li&gt;经典框架：jQuery 的使用&lt;/li&gt;
+      &lt;li&gt;MVC 框架：Backbone.js 的使用&lt;/li&gt;
+      &lt;li&gt;SPA 应用：Angular.js 的使用&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;高级主题：&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JS 的编码模式&lt;/li&gt;
+  &lt;li&gt;JS 的设计模式
+    &lt;ul&gt;
+      &lt;li&gt;构造器模式 / 模块模式 / 工厂模式 / 单例模式&lt;/li&gt;
+      &lt;li&gt;Pub / Sub 模式 / Facade 模式&lt;/li&gt;
+      &lt;li&gt;MVC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JS 的性能优化&lt;/li&gt;
+  &lt;li&gt;JS 的模块化设计
+    &lt;ul&gt;
+      &lt;li&gt;CommonJS / AMD 规范&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JS 的主要框架的源码剖析
+    &lt;ul&gt;
+      &lt;li&gt;Underscore.js&lt;/li&gt;
+      &lt;li&gt;jQuery&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JS 的服务器端应用
+    &lt;ul&gt;
+      &lt;li&gt;NodeJS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 30 Nov 2014 00:00:00 +0800</pubDate>
+        <link>http://www.surfacew.com/tech/2014/11/30/SomeJSTips/</link>
+        <guid isPermaLink="true">http://www.surfacew.com/tech/2014/11/30/SomeJSTips/</guid>
+        
+        <category>tech</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>时间的谏言</title>

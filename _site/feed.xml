@@ -5,9 +5,49 @@
     <description>Little Dots accumulated to make a Difference.</description>
     <link>http://www.surfacew.com/</link>
     <atom:link href="http://www.surfacew.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 30 Nov 2014 23:11:03 +0800</pubDate>
-    <lastBuildDate>Sun, 30 Nov 2014 23:11:03 +0800</lastBuildDate>
+    <pubDate>Tue, 02 Dec 2014 10:32:49 +0800</pubDate>
+    <lastBuildDate>Tue, 02 Dec 2014 10:32:49 +0800</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
+    
+      <item>
+        <title>关于 KGraph 答辩</title>
+        <description>&lt;p&gt;KGraph 最终所呈现的，是一个残缺不全的弃子的形态。&lt;/p&gt;
+
+&lt;p&gt;答辩完毕后，心中存有些许阴霾。可以说真正让自己感觉沮丧的，不是老师的提问或故意的刁难，而是自己内心存有一种遗憾，一种没能够真正实现的遗憾。&lt;/p&gt;
+
+&lt;p&gt;说来，KGraph 也是我人生中真正用心去做的第一个项目，我那时以为提携上一堆人，拥有共同的志趣（这很难实现）就能够走向所谓的成功。但理想和现实的鸿沟，终究还是断裂了群人之间的纽带……&lt;/p&gt;
+
+&lt;p&gt;到头来，我也只能够感叹&lt;strong&gt;天时、地利、人和&lt;/strong&gt;之重要性。&lt;/p&gt;
+
+&lt;p&gt;有时候，我会觉得 KGraph 对我而言，最重要的贡献是把我引荐到了百度，以及期间对代码，对技术的热枕，但这些确乎又显得虚无而不实。到头来，近半年的努力所造就的 KGraph，根本算不上是什么成果，也不是什么教训，只是我人生中一次颇有趣的探索的经历，期间教会了我很多为人做事的道理。&lt;/p&gt;
+
+&lt;p&gt;我已经语无伦次了。&lt;/p&gt;
+
+&lt;p&gt;就只想说：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Too young, too weak, we are all like that, there will be a long way to go, stay silent till you are strong enough.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;客观现实&lt;/strong&gt;大于主观描述，&lt;strong&gt;事实成果&lt;/strong&gt;大于过程诉说。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;现在，答辩完毕了。
+最终为这个项目立了一块碑，上面刻下一行字：&lt;strong&gt;埋葬的不是遗憾，而是最后的稚气&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;SurfaceW
+于贝壳
+2014-12-02&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 02 Dec 2014 00:00:00 +0800</pubDate>
+        <link>http://www.surfacew.com/me/2014/12/02/KGraph/</link>
+        <guid isPermaLink="true">http://www.surfacew.com/me/2014/12/02/KGraph/</guid>
+        
+        <category>kgraph</category>
+        
+        
+        <category>me</category>
+        
+      </item>
     
       <item>
         <title>JavaScript 一些学习建议</title>

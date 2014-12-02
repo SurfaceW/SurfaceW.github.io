@@ -272,6 +272,8 @@ a:visited { color: #4A90E2; }
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
+.post-content strong { color: #4A90E2;}
+
 .post pre,
 .post code {
   background-color: #F2F2F2;

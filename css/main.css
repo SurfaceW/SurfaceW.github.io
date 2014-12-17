@@ -5,6 +5,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* For IE and PC series */
+  font-family: Microsoft YaHei; 
   font-family: Lucida Grande;
 }
 

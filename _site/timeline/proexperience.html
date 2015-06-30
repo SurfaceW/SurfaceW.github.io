@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>YQN Events</title>
+		<meta name="description" content="TimelineJS example">
+		<!-- jQuery -->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<!-- BEGIN TimelineJS -->
+		<script type="text/javascript" src="storyjs-embed.js"></script>
+		<script src="data.js"></script>
+		<script>
+			$(window).resize(function () {
+				console.log('resize!');
+				window.location.reload();
+			});
+
+			var config = {
+				type:		'timeline',
+				width:		$(window).width(),
+				height:		$(window).height(),
+				source:		timelineData ,
+				embed_id:	'my-timeline',
+				debug:		false
+			};
+
+			var resizing = false;
+
+			$(document).ready(function() {
+				createStoryJS(config);
+			});
+		</script>
+		<!-- END TimelineJS -->
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="my-timeline"></div>
+	</body>
+</html>

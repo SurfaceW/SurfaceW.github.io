@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   /* For IE and PC series */
-  font-family: Microsoft YaHei; 
+  font-family: Microsoft YaHei;
   font-family: Lucida Grande;
 }
 
@@ -155,6 +155,21 @@ a:visited { color: #4A90E2; }
   top: 3px;
 }
 
+.subtitle {
+    margin-top: 155px;
+    padding: 10px;
+    color: white;
+    background: rgba(0,0,0,0.3);
+}
+
+.subtitle a {
+    color: white;
+}
+
+.subtitle a:hover {
+    color: white;
+}
+
 
 /* Page Content styles */
 /* ----------------------------------------------------------*/
@@ -172,8 +187,8 @@ a:visited { color: #4A90E2; }
 
 .posts { list-style-type: none; }
 
-.posts li { 
-  margin-bottom: 30px; 
+.posts li {
+  margin-bottom: 30px;
   border-left: 4px solid #4A90E2;
   padding-left: 14px;
   box-shadow: 0 2px 2px rgba(0,0,0,.16);
@@ -203,8 +218,8 @@ a:visited { color: #4A90E2; }
 /* Post styles */
 /* ----------------------------------------------------------*/
 
-.post-header { 
-  padding: 10px 0 30px; 
+.post-header {
+  padding: 10px 0 30px;
   border-bottom: 1px solid lightgray;
 }
 
@@ -224,8 +239,8 @@ a:visited { color: #4A90E2; }
 
 .post-content { margin: 0 0 30px; }
 
-.post-content > * { 
-  margin: 20px 0; 
+.post-content > * {
+  margin: 20px 0;
   color: rgba(0,0,0,0.8);
 }
 

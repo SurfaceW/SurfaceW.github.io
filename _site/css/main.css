@@ -51,8 +51,8 @@ a:visited { color: #4A90E2; }
   /* border-top: 5px solid #333; */
   /* border-bottom: 1px solid #e8e8e8; */
   min-height: 200px;
-  /*background-color: #4A90E2;*/
-  /*background:url('../img/index/01.jpg') no-repeat center center;*/
+  background-color: #4A90E2;
+  background:url('../img/index/01.jpg') no-repeat center center;
   -webkit-background-size:cover;
   -moz-background-size:cover;
   -o-background-size:cover;
@@ -294,13 +294,13 @@ a:visited { color: #4A90E2; }
 .post pre,
 .post code {
   background-color: #F2F2F2;
+  color: darkred;
   padding: 8px 12px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   font-size: 1em;
   overflow:scroll;
-
 }
 
 .post code { padding: 1px 5px; }

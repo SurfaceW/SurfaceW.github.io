@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="baidu-site-verification" content="3parGrXZYT" />
+    <title>Chrome DevTools 的应用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Little Dots accumulated to make a Difference.">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="http://www.surfacew.com/technology/2015/10/22/Chrome%20DevTools%20%E7%9A%84%E5%BA%94%E7%94%A8/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- JS File -->
+    <script type="text/javascript" src="/js/main.js"></script>
+    <!-- 百度统计代码 -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?6242d526c7b168993ae1fa46e9745996";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+  <div class="wrap">
+    <a class="site-title" href="/">SurfaceW</a>
+    <div class="subtitle">
+        <img src="/img/ui/proexperience.svg"  target="_blank" alt="project experience" style="width:22px; vertical-align:bottom;">
+        <a href="/timeline/proexperience.html" target="_blank">项目经验</a>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Chrome DevTools 的应用</h1>
+    <p class="meta">Oct 22, 2015</p>
+  </header>
+
+  <article class="post-content">
+  <blockquote>
+  <p>工欲善其事，必先利其器。</p>
+</blockquote>
+
+<p>就前端而言，Chrome DevTools 是 Debug 以及性能分析的神器。
+就前端工程师而言，用好调试和性能工具，才能够算是一个出色的前端工程师。
+我在这篇文章中将总结 Chrome DevTools 的一些最为典型的用法，以提高研发和调试效率。</p>
+
+<p>本文主要参考的资料：Chrome DevTools <a href="https://developer.chrome.com/devtools">Chrome 官方文档</a> (主要是官方文档又长又臭，加之英文版很少有人完全认真读完，所以在此结合自身经验总结最有价值的，最常用的部分于后方，查漏补缺，说不定有新发现~)</p>
+
+<h2 id="section">启用调试工具</h2>
+
+<ul>
+  <li>在网页中右键单击<code>审查元素</code> 或者 <code>右上角菜单栏中 -&gt; 更多工具 -&gt; 开发者工具</code></li>
+  <li>快捷键：<code>Ctrl[Command] + Shift[Opt] + I/J/C</code>
+    <ul>
+      <li><code>I</code> 打开调试工具，</li>
+      <li><code>J</code> 直接进入Console</li>
+      <li><code>C</code> 启动 Inspect Element 模式等价于右键在相关元素上单击审查元素</li>
+    </ul>
+  </li>
+  <li>点击调试工具左上角的 手机图标 可以进入 Device Mode（设备模式，可以模拟 iPad、iPhone 等测试环境）这一部分本文就没有详细提及了，请自行查阅：<a href="https://developer.chrome.com/devtools/docs/device-mode">Device-Mode</a> 
+    <ul>
+      <li>设备模拟：屏幕比例、尺寸、分辨率、DPR</li>
+      <li>模拟设备的旋转、模拟网络连接速度（2G网络、3G网络）</li>
+      <li>Media-Query 模拟</li>
+      <li>Sensors 模拟（Emulation 选项卡中、高大上！）</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="devtools-">DevTools 设置</h2>
+
+<p><img src="/img/articles/webdevtools/01.png" alt="01.png" /></p>
+
+<ul>
+  <li>注意1：在基础设置里面，有很多功能是需要手动启动的，例如比较常用的：<em>Disable Cache</em> (while DevTools is open)（缓存禁用）。</li>
+  <li>注意2：推荐启动 ShadowDOM、标尺、Ajax请求Log 的设置。选项，这有利于提高平时的开发效率。</li>
+</ul>
+
+<p>至于其余选项，实际开发中按需勾选。左上角还有 Devices 选项、Workspace 选项（支持本地加载文件的沙箱）、快捷键等选项，可以按需配置。调试面板支持对应的横屏、竖屏以及独立出来的现实方式，由个人喜好而定。面板右上方有一个 Drawer 的选项，点击他之后可以出一个抽屉状的区域，方便进行 Console, Search, Emulation, Rendering 选项卡的调试。快捷键是：[ESC]</p>
+
+<h2 id="section-1">工具的分类</h2>
+
+<p>Chrome 官方调试工具目前一共有 8 个部分构成，接下来将逐一介绍这些工具的用法。</p>
+
+<h3 id="elements">Elements</h3>
+
+<p>Elements 面板提供了对 HTML、CSS 的一系列实时的增删查改操作，方便开发者实时调试代码。我们能够实时在页面上上做实验，然后再回去修改编辑器中的代码。</p>
+
+<ul>
+  <li>使用 Inspect Element Mode 来定位页面上的元素能够快速找到其在 DOM 中的位置，可以通过点击 <em>放大镜</em> 的小图标来激活查找。也可以在页面的元素上右键单击：审查元素获取。</li>
+  <li>选中对应的 DOM 之后右键可以编辑对应的节点的 HTML 源码，增删查改节点，还可以模拟元素 <code>hover</code>, <code>click</code>, <code>focus</code>, <code>visited</code> 等状态的触发。</li>
+</ul>
+
+<p>在右侧选项卡中，支持如下的强大功能：</p>
+
+<ul>
+  <li>Styles 选项卡中，我们能够对对应元素的样式 <strong>实时</strong> 进行修改，Filter 方便查找对应的 CSS 样式，右上角的三个小标，分别支持添加新的规则、触发元素的状态改变以及修改动画速度。
+    <ul>
+      <li>由上图可见，调试工具非常方便，自动帮我们计算选择器的优先级，CSS规则是否适用等等，后面的元素盒模型也提供了精准的计算数据供参考。</li>
+      <li>CSS层级也分别显示出：级联的样式优先级、用户代理样式、作者样式、继承样式。</li>
+    </ul>
+  </li>
+  <li>Computed 选项卡输出的是经过合并计算之后的元素样式，这些值是最终渲染到屏幕上的数据。</li>
+  <li>EventListener 能够查看绑定在当前元素及其父元素上的事件监听器，可以在调试事件代码的时候进行查看。</li>
+  <li>DOM Breakpoints 可以查看当前元素上所设置的断点，一般来说有：子节点变化、节点属性被修改、节点被删除的断点，方便调试针对节点操作的代码。</li>
+</ul>
+
+<p>Tips：</p>
+
+<ul>
+  <li>元素支持拖曳操作，可以任意调换元素在 Document 中的位置。</li>
+  <li>在修改了 Elements 中对应的 HTML,CSS 后可在 Sources 面板中找到相关文件，点击右键：Local Modifications 可以查看对应的改动，方便将改动移植到编辑器中。</li>
+</ul>
+
+<h3 id="console">Console</h3>
+
+<p>Console 面板提供了一套针对开发者和代码之间交流的通道：</p>
+
+<ul>
+  <li>
+    <p>它能够显示开发者主动通过 console 对象 log 的信息，同时 Google 为开发者提供了 Console API 以扩展 Console 的调试功能。</p>
+  </li>
+  <li>
+    <p>它能显示错误，警告和提示信息，同时能够能够追溯到抛出信息的源码，以连接到 Sources 面板进行更深层次的诊断。</p>
+  </li>
+  <li>
+    <p>它能够 LOG 网络请求。</p>
+  </li>
+  <li>
+    <p>它能够实时地和当前的全局对象进行交互，类似于 Node 的实时解释器。</p>
+  </li>
+  <li>
+    <p>它还能够连接到 Network 面板和 Sources 面板等用于实时定位抛出信息的网络请求和代码。</p>
+  </li>
+</ul>
+
+<h4 id="console-api">常用的 Console API</h4>
+
+<ul>
+  <li><code>console.log()</code>, <code>console.warn()</code>, <code>console.error()</code>信息、警告、错误</li>
+  <li><code>console.assert(a&lt;=5, ‘a should &lt;= 5’)</code> 断言</li>
+  <li><code>console.trace()</code> 能够打印出当前执行函数的调用栈</li>
+  <li><code>console.table([{‘a’:1},{‘b’:2}])</code> 格式化复杂的数据结构为表格的样式</li>
+  <li><code>console.time(’taskname’), console.timeEnd(’taskname’)</code> 记录运行时间，同时会在 Timeline 时间轴上显示</li>
+  <li><code>console.timeStamp(’name’)</code> 可以命名 Timeline 中函数调用步骤名称</li>
+</ul>
+
+<p>Console 的 API 参考如下：<a href="https://developer.chrome.com/devtools/docs/console">Console API</a></p>
+
+<p>Tips:</p>
+
+<ul>
+  <li>Console 支持 Filter 能够过滤掉不同的信息，或者只保留有效的信息，比如只保留开发者所手动 Log 的 Logs。</li>
+  <li>使用 debugger; 命令能够让 js 在 console 中打断点，并且在该行暂停执行。</li>
+  <li>使用 <code>profile(‘mark’)</code>以及<code>profileEnd(‘mark’)</code>能够手动控制 JavaScript Profiler 的执行。</li>
+  <li>使用 <code>Shift + Enter</code> 能够在 Console 中换行，书写比较长的代码 :)</li>
+  <li>支持 SourceMap，针对 Browerify/Webpack 之类的合并代码在 Debug 的时候能够追溯回源代码之上。</li>
+</ul>
+
+<h3 id="sources">Sources</h3>
+
+<p>Sources 面板提供了强大的针对源码（主要为 JavaScript）的调试功能。它将 V8 Debugger 可视化。</p>
+
+<ul>
+  <li>它支持查找不同域下的代码，并在代码行上打断点。</li>
+  <li>它支持直接修改源代码。</li>
+  <li>它支持压缩代码自动格式化，方便为压缩后的代码打断点。</li>
+  <li>在右侧面板中提供了 JS 断点调试的重要工具：
+    <ul>
+      <li>continue 运行到下一个断点处</li>
+      <li>stop script execution 立即停止执行</li>
+      <li>Step over next function call 跳到下一个函数执行完毕处</li>
+      <li>Step into next function call 调到下一个函数执行开始处</li>
+      <li>Step out of current function call 跳出当前函数</li>
+      <li>Deactivate breakpoints 不激活断点</li>
+      <li>Pause on exceptions 在异常出暂停</li>
+      <li>Capture Async stack traces 捕获异步调用的函数站</li>
+    </ul>
+  </li>
+  <li>支持手动输入 Watch Expressions 构建断点</li>
+  <li>支持查询调用栈</li>
+  <li>支持作用域和作用域链的查询</li>
+  <li>支持 DOM、XHR 以及事件处设置断点</li>
+</ul>
+
+<p>Tips:</p>
+
+<ul>
+  <li>我们能够直接编辑 Source 面板的源码进行调试，同时可以查看本地文件的修改情况，这样能够大大提高效率。</li>
+  <li>使用 Ctrl[Command] + F 能够进行搜索源代码，甚至直接替换代码。</li>
+  <li>在断点处单击右键可以编辑触发断点的条件。</li>
+</ul>
+
+<h3 id="network">Network</h3>
+
+<p>Network 面板提供了调试网络性能的一系列工具：</p>
+
+<ul>
+  <li>它能够捕获所有的请求信息，并将其做成时间轴，方便查看资源或者 Ajax 请求等详细信息。
+    <ul>
+      <li>它能够捕获两个重要的事件：<code>DOMContentLoaded</code> 事件（紫色线）以及 <code>load</code> 事件（红色线）的触发时间。</li>
+    </ul>
+  </li>
+  <li>它能够记录各类请求的具体信息，以 HTTP 请求为例
+    <ul>
+      <li>HTTP 请求的头部信息</li>
+      <li>HTTP 请求相应的信息、响应信息的预览（图片、JSON格式化、网页预览等）</li>
+      <li>HTTP 请求所携带的 Cookie</li>
+      <li>HTTP 请求耗时的具体信息，具体的字段值标记含义可以参考：<a href="https://developer.chrome.com/devtools/docs/network#resource-network-timing">Chrome Network Timing</a></li>
+    </ul>
+  </li>
+  <li>它能够和资源面板保持连接，方便选择资源的跳转。</li>
+</ul>
+
+<p>一个 Web 请求的网络流程：
+<img src="/img/articles/webdevtools/02.png" alt="image" />
+具体的数据，可以通过：<code>window.performance.getEntries()</code> 获得各个资源的网络时间戳。</p>
+
+<p>Tips:</p>
+
+<ul>
+  <li>在请求资源上右键可以拷贝各种请求相关的信息，比如：cURL, HAR，请求头，响应信息等等，颇为方便。</li>
+  <li>针对 Ajax 请求，右键支持重新发送相同的 Ajax 请求，方便调试。</li>
+  <li>支持 WebSocket Inspection 功能，可以使用 Filter 将 WebSocket 独立出来。</li>
+  <li>时间轴上表格的标题列上右键可以添加更多的 HTTP 属性进入到表格中，比如 method 属性。</li>
+</ul>
+
+<h3 id="timeline">Timeline</h3>
+
+<p>Timeline 面板提供了一套用于提高渲染性能的工具，它能够清晰地显示整个浏览器渲染一张网页、执行各种操作的细节信息。主要记录了以下四种操作耗时：
+<img src="/img/articles/webdevtools/03.png" alt="image" />
+可以通过：Events 模式来查看捕获到的事件信息；Frames 模式可以显示捕获到的页面性能信息；Memory 模式可以查看页面内存的使用情况。</p>
+
+<p>通过理解如下标记所表示的事件含义，我们能够更好地理解页面的事件流程，检查出类似于强制型 Layouts 的影响页面性能的代码（Timeline 中一般会以小三角警告之）：</p>
+
+<p><img src="/img/articles/webdevtools/04.png" alt="image" />
+<img src="/img/articles/webdevtools/05.png" alt="image" />
+<img src="/img/articles/webdevtools/06.png" alt="image" />
+<img src="/img/articles/webdevtools/07.png" alt="image" /></p>
+
+<h3 id="profiles">Profiles</h3>
+
+<p>Profiles 面板提供了一系列用于提高 JavaScript / CSS 性能的工具：</p>
+
+<ul>
+  <li>CPU Profiler：它能够显示脚本调用的函数所使用的 CPU 时间。可以统计出耗时最多的函数，以考虑优化。</li>
+  <li>Heap Profiler：它能够显示脚本所分配的内存情况。（主要是 JS 对象和 DOM 节点）以此检查是否存在内存泄露或者页面占用内存过多的问题。</li>
+  <li>JavaScript Profile：能够显示执行脚本所运行的时间。</li>
+</ul>
+
+<p>深入请参考：<a href="https://developer.chrome.com/devtools/docs/javascript-memory-profiling">Prifiles</a></p>
+
+<h3 id="resources">Resources</h3>
+
+<p>Resources 面板则提供了一系列的资源查询：</p>
+
+<ul>
+  <li>
+    <p>页面所下载的资源：HTML文档、CSS文档、图片、文字、脚本等等。</p>
+  </li>
+  <li>
+    <p>页面所对应的：WebSQL、IndexedDB、LocalStorage、SessionStorage、Cookies、ApplicationCache 以及 Cache Storage 信息的查询。</p>
+    <ul>
+      <li>Cookies 是常用的面板，我们可以在这里浏览、删除、修改 Cookies。</li>
+      <li>LocalStorage 也就不赘述了。</li>
+      <li>ApplicationCache 是通过 manifest 文件定义的缓存文件，支持离线应用。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="audits">Audits</h3>
+
+<p>针对页面提供优化意见，官方推荐使用 PageSpeed Insights 在线测试工具来替代。<a href="https://developers.google.com/speed/pagespeed/insights/">推荐工具</a></p>
+
+<p>最后：</p>
+
+<ul>
+  <li>Chrome 的这个调试工具还支持调试 NodeJS 所编写的应用程序！参考其中一种该解决方案：<a href="https://github.com/node-inspector/node-inspector">Node Inspector</a></li>
+  <li>React 等三方也提供了针对 React 调试的 Chrome 插件，以增强 Debugger 针对特殊应用的能力。</li>
+  <li>Chrome 提供了 Canary 这个工具来支持开发者领略最新的 Chrome 技术，如果不嫌烦的话，可以开发用 Canary 而平时浏览网页和正式测试的时候使用 Chrome。<a href="https://www.google.com/intl/en/chrome/browser/canary.html">地址</a></li>
+  <li>Chrome 支持远程调试 <a href="https://developer.chrome.com/devtools/docs/remote-debugging">Android</a></li>
+</ul>
+
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <!-- <h2 class="footer-heading">SurfaceW</h2> -->
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>SurfaceW</li>
+        <li><a href="mailto:surfacew@163.com">surfacew@163.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li>
+          <a href="https://github.com/SurfaceW" target="self_blank">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">SurfaceW</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/yeqingnan" target="self_blank">
+            <span class="icon twitter">
+              <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27
+                c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767
+                c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206
+                C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271
+                c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469
+                c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+              </svg>
+            </span>
+            <span class="username">yeqingnan</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p class="text">Little Dots accumulated to make a Difference.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>

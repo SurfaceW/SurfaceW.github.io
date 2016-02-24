@@ -86,7 +86,7 @@
   }
 })();
 
-window.addEventListenr('load', function () {
+window.addEventListener('load', function () {
   setTimeout(function () {_services_all_ready('fis')}, 400);
 })
 

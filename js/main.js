@@ -25,15 +25,6 @@
  * @Last Modified time: 
  */
 
-/* 
- * Timing API to monitor Page Performance
- * 
- * @Author: qingnan.yqn
- * @Date: 2016-02-24
- * @Last Modified by:
- * @Last Modified time: 
- */
-
 (function () {
 
   'use strict'
@@ -49,6 +40,15 @@
 
   var timing;
   var startTime = new Date().getTime();
+  var timeRanges = [1000, 3000, 5000, 10000]
+  // Give number and return the range index in ranges
+  var range = function (num, ranges) {
+    var index = 1;
+    for (var i = 0; i < ranges.length; i++) {
+      if (ranges[i] < num) { index++; }
+    }
+    return index;
+  }
 
   // only work on mobile device
   if (window.WindVane) {
@@ -60,12 +60,12 @@
   if (window.performance && window.performance.timing) {
     timing = window.performance.timing;
     window.onload = function () {
-      fb.resp = timing.responseEnd - timing.navigationStart;
-      fb.load = timing.domComplete - startTime;
+      fb.resp = range(timing.responseEnd - timing.navigationStart, timeRanges);
+      fb.load = range(timing.domComplete - startTime, timeRanges);
     } 
   } else {
     window.onload = function () {
-      fb.load = new Date().getTime() - startTime;
+      fb.load = range(new Date().getTime() - startTime, timeRanges));
     }
   }
   
@@ -77,7 +77,7 @@
    */
   window._services_all_ready = function (from) {
     fb.from = from || '';
-    fb.ready = new Date().getTime() - startTime;
+    fb.ready = ranges(new Date().getTime() - startTime, timeRanges);
     if (window._gl_record) {
       _gl_record('path', fb);
     } else {

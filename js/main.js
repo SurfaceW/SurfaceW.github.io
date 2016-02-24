@@ -65,7 +65,7 @@
     } 
   } else {
     window.onload = function () {
-      fb.load = range(new Date().getTime() - startTime, timeRanges));
+      fb.load = range(new Date().getTime() - startTime, timeRanges);
     }
   }
   

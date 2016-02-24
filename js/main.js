@@ -77,7 +77,7 @@
 
 })();
 
-setTimeout(function () {
-  _services_all_ready()
-}, 300);
+window.addEventListener('load', function () {
+  _services_all_ready();
+});
 

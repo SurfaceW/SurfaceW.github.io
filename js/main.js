@@ -25,22 +25,28 @@
  * @Last Modified time: 
  */
 
+/* 
+ * Timing API to monitor Page Performance
+ * 
+ * @Author: qingnan.yqn
+ * @Date: 2016-02-24
+ * @Last Modified by:
+ * @Last Modified time: 
+ */
+
 (function () {
 
   'use strict'
 
   var fb = {
     nw: '',    // network type
-    resp: -1,  // response time
-    dom: -1,   // dom ready time
-    load: -1,  // dom complete loading time
-    ready: -1, // services ready time
+    resp: -1,  // network responding time
+    load: -1,  // from resp time to dom complete loaded time
+    ready: -1, // from resp time to services ready time
     from: '',  // from which type of product line
     local: ''  // location of service (us / zh)
   };
 
-  var bindEvent = document.addEventListener ? document.addEventListener
-    : document.attachEvent;
   var timing;
   var startTime = new Date().getTime();
 
@@ -55,14 +61,9 @@
     timing = window.performance.timing;
     window.onload = function () {
       fb.resp = timing.responseEnd - timing.navigationStart;
-      fb.dom = timing.domContentLoadedEventStart - startTime;
       fb.load = timing.domComplete - startTime;
     } 
   } else {
-    fb.time.responseReady = null;
-    document.bindEvent('DOMContentLoaded', function () {
-      fb.dom = new Date().getTime() - startTime;
-    });
     window.onload = function () {
       fb.load = new Date().getTime() - startTime;
     }
@@ -72,10 +73,10 @@
    * Call manually while all services are ready to
    * to record the ready time.
    * 
-   * @param  {String} from [nw | fis | va_mb | va_pc | hx]
+   * @param  {String} nw | fis | va_mb | va_pc | hx]
    */
   window._services_all_ready = function (from) {
-    fb.from = from || ' ';
+    fb.from = from || '';
     fb.ready = new Date().getTime() - startTime;
     if (window._gl_record) {
       _gl_record('path', fb);
@@ -83,12 +84,9 @@
       console.log(fb);
     }
   }
-
 })();
 
-window.addEventListener('load', function () {
-  setTimeout(function () {
-    _services_all_ready('fis');
-  }, 200)
+window.addEventListenr('load', function () {
+  setTimeout(function () {_services_all_ready('fis')}, 400);
 })
 

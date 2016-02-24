@@ -32,15 +32,12 @@
   var fb = {
     nw: '',    // network type
     resp: -1,  // response time
-    dom: -1,   // dom ready time
     load: -1,  // dom complete loading time
     ready: -1, // services ready time
     from: '',  // from which type of product line
     local: ''  // location of service (us / zh)
   };
 
-  var bindEvent = document.addEventListener ? document.addEventListener
-    : document.attachEvent;
   var timing;
   var startTime = new Date().getTime();
 
@@ -55,14 +52,10 @@
     timing = window.performance.timing;
     window.onload = function () {
       fb.resp = timing.responseEnd - timing.navigationStart;
-      fb.dom = timing.domContentLoadedEventStart - startTime;
       fb.load = timing.domComplete - startTime;
     } 
   } else {
     fb.time.responseReady = null;
-    document.bindEvent('DOMContentLoaded', function () {
-      fb.dom = new Date().getTime() - startTime;
-    });
     window.onload = function () {
       fb.load = new Date().getTime() - startTime;
     }
@@ -72,23 +65,14 @@
    * Call manually while all services are ready to
    * to record the ready time.
    * 
-   * @param  {String} from [nw | fis | va_mb | va_pc | hx]
+   * @param  {String} from which product line [nw | fis | va_mb | va_pc | hx]
    */
   window._services_all_ready = function (from) {
     fb.from = from || ' ';
     fb.ready = new Date().getTime() - startTime;
     if (window._gl_record) {
       _gl_record('path', fb);
-    } else {
-      console.log(fb);
     }
   }
-
 })();
-
-window.addEventListener('load', function () {
-  setTimeout(function () {
-    _services_all_ready('fis');
-  }, 200)
-})
 

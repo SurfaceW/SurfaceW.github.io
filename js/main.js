@@ -60,24 +60,16 @@
       fb.time.pageReady = new Date().getTime() - startTime;
     }
   }
-
-  // fb.time.responseReady = null;
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   fb.time.domReady = new Date().getTime() - startTime;
-  // }, false);
-  // window.onload = function () {
-  //   fb.time.pageReady = new Date().getTime() - startTime;
-  // }
   
   // call manually while all services are ready
   window._services_all_ready = function () {
     fb.time.serviceReady = new Date().getTime() - startTime;
-    console.log(fb.time);
+    console.log(fb);
   }
 
 })();
 
 window.addEventListener('load', function () {
-  _services_all_ready();
+  setTimeout(function () {_services_all_ready();}, 300);
 });
 

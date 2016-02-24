@@ -55,14 +55,14 @@
     timing = window.performance.timing;
     window.onload = function () {
       fb.resp = timing.responseEnd - timing.navigationStart;
-      fb.dom = timing.DOMContentLoaded - startTime;
+      fb.dom = timing.domContentLoadedEventStart - startTime;
       fb.load = timing.domComplete - startTime;
     } 
   } else {
     fb.time.responseReady = null;
     document.bindEvent('DOMContentLoaded', function () {
       fb.dom = new Date().getTime() - startTime;
-    }, false);
+    });
     window.onload = function () {
       fb.load = new Date().getTime() - startTime;
     }

@@ -77,7 +77,7 @@
    */
   window._services_all_ready = function (from) {
     fb.from = from || '';
-    fb.ready = ranges(new Date().getTime() - startTime, timeRanges);
+    fb.ready = range(new Date().getTime() - startTime, timeRanges);
     if (window._gl_record) {
       _gl_record('path', fb);
     } else {

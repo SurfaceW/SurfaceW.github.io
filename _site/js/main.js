@@ -30,46 +30,65 @@
   'use strict'
 
   var fb = {
-    networkType: null,
-    time: {}
+    nw: '',    // network type
+    resp: -1,  // response time
+    dom: -1,   // dom ready time
+    load: -1,  // dom complete loading time
+    ready: -1, // services ready time
+    from: '',  // from which type of product line
+    local: ''  // location of service (us / zh)
   };
+
+  var bindEvent = document.addEventListener ? document.addEventListener
+    : document.attachEvent;
+  var timing;
+  var startTime = new Date().getTime();
 
   // only work on mobile device
   if (window.WindVane) {
     WindVane.call('WVNative', 'getCurrentNetStatus', {}, function (e) {
-      fb.networkType = e.netStatus;
+      fb.nw = e.netStatus;
     });
   }
-  
-  var timing;
-  var startTime = new Date().getTime();
 
   if (window.performance && window.performance.timing) {
     timing = window.performance.timing;
     window.onload = function () {
-      fb.time.responseReady = timing.responseEnd - timing.navigationStart;
-      fb.time.domReady = timing.domComplete - startTime;
-      fb.time.pageReady = new Date().getTime() - startTime;
+      fb.resp = timing.responseEnd - timing.navigationStart;
+      fb.dom = timing.DOMContentLoaded - startTime;
+      fb.load = timing.domComplete - startTime;
     } 
   } else {
     fb.time.responseReady = null;
-    document.addEventListener('DOMContentLoaded', function () {
-      fb.time.domReady = new Date().getTime() - startTime;
+    document.bindEvent('DOMContentLoaded', function () {
+      fb.dom = new Date().getTime() - startTime;
     }, false);
     window.onload = function () {
-      fb.time.pageReady = new Date().getTime() - startTime;
+      fb.load = new Date().getTime() - startTime;
     }
   }
   
-  // call manually while all services are ready
-  window._services_all_ready = function () {
-    fb.time.serviceReady = new Date().getTime() - startTime;
-    console.log(fb);
+  /**
+   * Call manually while all services are ready to
+   * to record the ready time.
+   * 
+   * @param  {String} from [nw | fis | va_mb | va_pc | hx]
+   */
+  window._services_all_ready = function (from) {
+    fb.from = from || ' ';
+    fb.ready = new Date().getTime() - startTime;
+    if (window._gl_record) {
+      _gl_record('path', fb);
+    } else {
+      console.log(fb);
+    }
   }
 
 })();
 
 window.addEventListener('load', function () {
-  setTimeout(function () {_services_all_ready();}, 300);
-});
+  setTimeout(function () {
+    _services_all_ready('fis');
+  }, 200)
+})
 

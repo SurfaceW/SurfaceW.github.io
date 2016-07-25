@@ -5,9 +5,102 @@
     <description>Little Dots accumulated to make a Difference.</description>
     <link>http://www.surfacew.com/</link>
     <atom:link href="http://www.surfacew.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 24 Feb 2016 16:24:51 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Feb 2016 16:24:51 +0800</lastBuildDate>
+    <pubDate>Tue, 26 Jul 2016 01:16:45 +0800</pubDate>
+    <lastBuildDate>Tue, 26 Jul 2016 01:16:45 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>在Sublime和WebStorm下使用Eslinter以及Airbnb规则集合</title>
+        <description>&lt;p&gt;前提条件：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;已安装 &lt;code&gt;npm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;首先需要做一些针对全局和项目的通用安装：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装 eslint：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;
+npm install -g eslint
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;转移到你正在开发的项目的根目录，如果根目录下没有 &lt;code&gt;.eslintrc&lt;/code&gt; ，建立一个相同命名的文件，并向文件添加如下内容：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;json&quot;&gt;
+{
+    &quot;parser&quot;: &quot;babel-eslint&quot;,
+    &quot;env&quot;: {
+        &quot;browser&quot;: true,
+        &quot;node&quot;: true
+    },
+    &quot;extends&quot;: &quot;airbnb&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在项目目录下安装 Airbnb JavaScript 条件集：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt; 
+# 这里我们采用 Airbnb 的规范集合
+npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下来根据不同的编辑器环境做 Linter 的配置：&lt;/p&gt;
+
+&lt;h4 id=&quot;sublime&quot;&gt;Sublime&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装 SublimeLinter ：推荐在 Sublime 下使用 &lt;code&gt;Package Control&lt;/code&gt; 来安装 SublimeLinter，&lt;a href=&quot;http://www.sublimelinter.com/en/latest/&quot;&gt;Sublime Linter Guide&lt;/a&gt;。&lt;/li&gt;
+  &lt;li&gt;重新启动 Sublime 确保 SublimeLinter 已经启动，方可看到 Lint 信息了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;webstorm&quot;&gt;WebStorm&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在 WebStorm 中激活 ESLint 插件。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;
+preferences &amp;gt; Languages &amp;amp; Frameworks &amp;gt; JavaScript &amp;gt; Code Quality Tools &amp;gt; ESLint
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在 ESLint 配置面板中配置 Linter 信息如下：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意：ESLint package 和 Additional rules directory 需要配置为 ESLint 以及 Airbnb 配置的安装目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/linter.png&quot; alt=&quot;linter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;配置完毕之后 Linter 便可立即生效。&lt;/p&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;参考&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/airbnb/javascript#the-javascript-style-guide-guide&quot;&gt;Airbnb JavaScript Style Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://eslint.org/&quot;&gt;ESLint&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sublimelinter.com/en/latest/&quot;&gt;SublimeLinter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hackingwithreact.com/read/1/40/linting-react-using-airbnbs-eslint-rules&quot;&gt;Linting React using Airbnb’s ESLint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 25 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://www.surfacew.com/fe_tech/2016/07/25/Linter/</link>
+        <guid isPermaLink="true">http://www.surfacew.com/fe_tech/2016/07/25/Linter/</guid>
+        
+        <category>code fe Quality</category>
+        
+        
+        <category>fe_tech</category>
+        
+      </item>
     
       <item>
         <title>前端入门学习指南</title>
@@ -602,135 +695,6 @@
         
         
         <category>me</category>
-        
-      </item>
-    
-      <item>
-        <title>JavaScript 一些学习建议</title>
-        <description>&lt;h1 id=&quot;js&quot;&gt;JS学习的若干建议&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;我自己学习 JS 所总结的一些经验，分享给大家&lt;strong&gt;参考&lt;/strong&gt;。&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;准备阶段：&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;What / Why / How？&lt;/em&gt; 的技术三问。&lt;/li&gt;
-  &lt;li&gt;JS 这门语言能够用来干啥？
-    &lt;ul&gt;
-      &lt;li&gt;实现这些功能类似的而技术有哪些？但相比起来，为什么我要学习 JS？&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JS 学习和使用的意义是什么？有何用？&lt;/li&gt;
-  &lt;li&gt;JS 学习之前，我的获取知识的渠道有哪些？它们是&lt;strong&gt;最优&lt;/strong&gt;的么？
-    &lt;ul&gt;
-      &lt;li&gt;书籍？视频？网页？教程？培训 …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;定位我的学习目标。
-    &lt;ul&gt;
-      &lt;li&gt;Basic Level / Core Level / Advanced Level / Industry Level / Master Level&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;基础与核心主题：&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;JS 的语言核心的学习
-    &lt;ul&gt;
-      &lt;li&gt;JS 特性&lt;/li&gt;
-      &lt;li&gt;词法结构 / 语法结构&lt;/li&gt;
-      &lt;li&gt;类型 / 值 / 变量&lt;/li&gt;
-      &lt;li&gt;语句&lt;/li&gt;
-      &lt;li&gt;对象&lt;/li&gt;
-      &lt;li&gt;数组&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;函数&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;类和模块&lt;/li&gt;
-      &lt;li&gt;正则表达式和匹配&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JS 的重要特征的强调
-    &lt;ul&gt;
-      &lt;li&gt;词法作用域&lt;/li&gt;
-      &lt;li&gt;闭包&lt;/li&gt;
-      &lt;li&gt;函式编程&lt;/li&gt;
-      &lt;li&gt;匿名自调用函数&lt;/li&gt;
-      &lt;li&gt;回调函数&lt;/li&gt;
-      &lt;li&gt;柯里化函数&lt;/li&gt;
-      &lt;li&gt;高阶函数&lt;/li&gt;
-      &lt;li&gt;原型继承&lt;/li&gt;
-      &lt;li&gt;类工厂函数&lt;/li&gt;
-      &lt;li&gt;事件队列&lt;/li&gt;
-      &lt;li&gt;异步事件 Deffered / Promise&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JS 的 API 的学习
-    &lt;ul&gt;
-      &lt;li&gt;核心 API
-        &lt;ul&gt;
-          &lt;li&gt;Array / Date /  RegExp&lt;/li&gt;
-          &lt;li&gt;事件系统&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;客户端 API
-        &lt;ul&gt;
-          &lt;li&gt;Window / Document / DOM  / CSS / Cookie &lt;/li&gt;
-          &lt;li&gt;HTML5 API
-            &lt;ul&gt;
-              &lt;li&gt;LocalStorage / SessionStorage / Canvas …&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Node API&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JS 的主要框架的应用
-    &lt;ul&gt;
-      &lt;li&gt;经典框架：jQuery 的使用&lt;/li&gt;
-      &lt;li&gt;MVC 框架：Backbone.js 的使用&lt;/li&gt;
-      &lt;li&gt;SPA 应用：Angular.js 的使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;高级主题：&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;JS 的编码模式&lt;/li&gt;
-  &lt;li&gt;JS 的设计模式
-    &lt;ul&gt;
-      &lt;li&gt;构造器模式 / 模块模式 / 工厂模式 / 单例模式&lt;/li&gt;
-      &lt;li&gt;Pub / Sub 模式 / Facade 模式&lt;/li&gt;
-      &lt;li&gt;MVC&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JS 的性能优化&lt;/li&gt;
-  &lt;li&gt;JS 的模块化设计
-    &lt;ul&gt;
-      &lt;li&gt;CommonJS / AMD 规范&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JS 的主要框架的源码剖析
-    &lt;ul&gt;
-      &lt;li&gt;Underscore.js&lt;/li&gt;
-      &lt;li&gt;jQuery&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JS 的服务器端应用
-    &lt;ul&gt;
-      &lt;li&gt;NodeJS&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sun, 30 Nov 2014 00:00:00 +0800</pubDate>
-        <link>http://www.surfacew.com/tech/2014/11/30/SomeJSTips/</link>
-        <guid isPermaLink="true">http://www.surfacew.com/tech/2014/11/30/SomeJSTips/</guid>
-        
-        <category>tech</category>
-        
-        
-        <category>tech</category>
         
       </item>
     

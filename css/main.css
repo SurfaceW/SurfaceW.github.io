@@ -42,7 +42,6 @@ a:visited { color: #4A90E2; }
   zoom: 1;
 }
 
-
 /* Layout Styles */
 /* ----------------------------------------------------------*/
 
@@ -227,7 +226,7 @@ a:visited { color: #4A90E2; }
   color: #417FC7;
   font-size: 2em;
   letter-spacing: -1.75px;
-  line-height: 1;
+  line-height: 1.4em;
   font-weight: 300;
 }
 
@@ -294,7 +293,6 @@ a:visited { color: #4A90E2; }
 .post pre,
 .post code {
   background-color: #F2F2F2;
-  color: darkred;
   padding: 8px 12px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -459,7 +457,10 @@ a:visited { color: #4A90E2; }
     margin: 0;
   }
 
-  .post-header h1 { font-size: 2em; }
+  .post-header h1 {
+    font-size: 2em;
+    line-height: 1.4em;
+  }
   .post-content h2 { font-size: 1.2em; }
   .post-content h3 { font-size: 1.1em; }
   .post-content h4 { font-size: 1em; }

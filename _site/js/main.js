@@ -31,15 +31,24 @@
 
   var fb = {
     nw: '',    // network type
-    resp: -1,  // response time
-    load: -1,  // dom complete loading time
-    ready: -1, // services ready time
+    resp: -1,  // network responding time
+    load: -1,  // from resp time to dom complete loaded time
+    ready: -1, // from resp time to services ready time
     from: '',  // from which type of product line
     local: ''  // location of service (us / zh)
   };
 
   var timing;
   var startTime = new Date().getTime();
+  var timeRanges = [1000, 3000, 5000, 10000]
+  // Give number and return the range index in ranges
+  var range = function (num, ranges) {
+    var index = 1;
+    for (var i = 0; i < ranges.length; i++) {
+      if (ranges[i] < num) { index++; }
+    }
+    return index;
+  }
 
   // only work on mobile device
   if (window.WindVane) {
@@ -51,13 +60,12 @@
   if (window.performance && window.performance.timing) {
     timing = window.performance.timing;
     window.onload = function () {
-      fb.resp = timing.responseEnd - timing.navigationStart;
-      fb.load = timing.domComplete - startTime;
+      fb.resp = range(timing.responseEnd - timing.navigationStart, timeRanges);
+      fb.load = range(timing.domComplete - startTime, timeRanges);
     } 
   } else {
-    fb.time.responseReady = null;
     window.onload = function () {
-      fb.load = new Date().getTime() - startTime;
+      fb.load = range(new Date().getTime() - startTime, timeRanges);
     }
   }
   
@@ -65,14 +73,20 @@
    * Call manually while all services are ready to
    * to record the ready time.
    * 
-   * @param  {String} from which product line [nw | fis | va_mb | va_pc | hx]
+   * @param  {String} nw | fis | va_mb | va_pc | hx]
    */
   window._services_all_ready = function (from) {
-    fb.from = from || ' ';
-    fb.ready = new Date().getTime() - startTime;
+    fb.from = from || '';
+    fb.ready = range(new Date().getTime() - startTime, timeRanges);
     if (window._gl_record) {
       _gl_record('path', fb);
+    } else {
+      console.log(fb);
     }
   }
 })();
+
+window.addEventListener('load', function () {
+  setTimeout(function () {_services_all_ready('fis')}, 400);
+})
 

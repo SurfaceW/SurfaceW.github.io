@@ -5,9 +5,260 @@
     <description>Little Dots accumulated to make a Difference.</description>
     <link>http://www.surfacew.com/</link>
     <atom:link href="http://www.surfacew.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Jul 2016 01:16:45 +0800</pubDate>
-    <lastBuildDate>Tue, 26 Jul 2016 01:16:45 +0800</lastBuildDate>
+    <pubDate>Tue, 02 Aug 2016 09:25:48 +0800</pubDate>
+    <lastBuildDate>Tue, 02 Aug 2016 09:25:48 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Alfred 效率神器全攻略</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;工欲善其事必先利其器，Alfred 在 Mac 上所迸发的效率是前所未有的！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/img/articles/alfred/appicon.png&quot; style=&quot;width: 200px; height: 200px;&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;作为 Mac 上最强大的效率工具，Alfred 在 Spotlight（MacOS X 自带的搜索和快速启动引擎）的基础上优化了快速启动与搜索的功能，还引入了 Workflows 等强大的扩展功能，使之成为了一个拥有无限自动化潜力的「工具平台」软件，可以用它来实现近乎一切有关自动化的想法。&lt;/p&gt;
+
+&lt;p&gt;我虽不是 Alfred 的骨灰级用户，但作为一个普通「玩家」，就已经在日常工作中很高频率的使用到了 Alfred。以下图为证：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;可以看见周期性的「下凹」吧？没错，那就是日常偷懒的周六周日 ╮(╯_╰)╭&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/QQ20160730-0@2x.jpg&quot; alt=&quot;QQ20160730-0@2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;为了说明 Alfred 的潜在价值。在这里，我们不妨做一个简单的计算，假设每天我都能够保持现况以每日平均唤醒 45.2 次为基数（其实最近的使用频率远高于 45.2 次）。假如每次 Alfred 的操作，可以为我节省 &lt;code&gt;5s&lt;/code&gt; 的时间（往往有些复杂的操作会大于 5s，比如去寻找一个藏得很深的文件)，那么 5 年下来，竟然能够节省 &lt;strong&gt;4.7&lt;/strong&gt; 天。换言之，你能够少用 4.7 天的电脑去工作，换言之，&lt;strong&gt;Alfred 让你的生命延长了 4.7 天&lt;/strong&gt;！&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;shell
+5 * 365 * 45.2 * 5 / 3600 / 24 = 4.773726852 天
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;可见，Alfred 是每日强依赖于计算机的工作者的效率神器。鉴于之前互联网上零零散散地对 Alfred 的文章介绍不够系统，也不是最新，所以我打算在此做个「全家桶」，让读者更好地使用 Alfred 来提高日常的工作效率！&lt;/p&gt;
+
+&lt;p&gt;那么接下来我就带领大家感受一下 Alfred 的魅力吧 ~&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;软件安装&lt;/h2&gt;
+
+&lt;p&gt;Alfred 仅支持 Mac 操作系统。推荐在 &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;官方网站&lt;/a&gt; 或 AppStore 中下载该应用，目前其最新版本为：&lt;code&gt;3.0.3&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;Alfred 的基本功能是免费的，但部分强大的扩展功能和 Workflows 功能是需要购买升级包的。个人推荐有经济能力的人还是购买正版的授权码，因为这款软件绝对值这个价（个人授权是 17 欧元，折合人民币 126 元左右，家庭版则更便宜）。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;基础功能配置和使用&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;基础配置&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;推荐大家配置 Alfred 的唤醒键为自己熟悉的快捷键，我个人喜欢使用 &lt;code&gt;⌥ (Option) + Space&lt;/code&gt; 键唤醒，同时也选择关闭了 Apple 自带的 Spotlight 搜索。如何关闭 Spotlight 请自行百度。&lt;/li&gt;
+  &lt;li&gt;在 Features 右侧面板的 Default Results 选项卡中，我们能够让 Alfred 选择性地从 Apple Spotlight 所提供的元数据索引服务中选择自己想要搜索的内容类型和地址。
+    &lt;ul&gt;
+      &lt;li&gt;在配置的时候，&lt;em&gt;最理想的是只将自己期望检索的内容放入搜索域（Search Scope）中&lt;/em&gt;，这样能够很大程度上提高 Alfred 的展示搜索结果的速度。 &lt;/li&gt;
+      &lt;li&gt;对于检索文件的类型，自然也是越少越好，对于我而言很少用到图片、压缩包等文件类型的检索，自然就去掉了。注意：&lt;strong&gt;这里不推荐大家搜索所有类型的文件（Search all file types）&lt;/strong&gt; 因为这样搜索出来的结果不仅速度慢，而且搜索结果质量非常之差，会搜出很多系统生成的文件信息等等。&lt;/li&gt;
+      &lt;li&gt;其次在右侧 &lt;code&gt;Advanced…&lt;/code&gt; 按钮上可以配置自定义类型的文件，比如我这里配置了思维导图的 &lt;code&gt;.mmap&lt;/code&gt; 以及 markdown 文件的 &lt;code&gt;.md&lt;/code&gt; ，根据自身需求可以添加对应的文件类型让 Alfred 去检索这些文件。只需要将 Alfred 无法检索到的文件类型拖至弹出的框内即可添加。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/QQ20160730-1@2x.jpg&quot; alt=&quot;QQ20160730-1@2x&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 还能够选择默认的样式或者自定义外观，喜欢折腾 DIY 样式的小伙伴可以在 &lt;code&gt;Appearance&lt;/code&gt; 面板中修改 Alfred 交互面板的样式。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/QQ20160731-4@2x.jpg&quot; alt=&quot;QQ20160731-4@2x&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在 &lt;code&gt;Advanced&lt;/code&gt; 配置中有涉及「缓存清理」、「元数据重建」等高级配置功能，一般不需要配置，不知道如何使用的情况下请不要茫然下手。&lt;/li&gt;
+  &lt;li&gt;Alfred 同时也支持使用「移动端版本的 Alfred」来控制桌面端。具体可以参考 &lt;a href=&quot;http://sspai.com/28137&quot;&gt;这篇文章&lt;/a&gt; ，在这里我就不赘述了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;基础功能&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;搜索功能&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;通过上述的配置，我能够非常快地搜索各类指定类型的文件。在对应的搜索结果上：
+    &lt;ul&gt;
+      &lt;li&gt;我们能够通过 &lt;code&gt;↑↓&lt;/code&gt; 键切换选项，并敲击回车键打开文件或者目录。&lt;/li&gt;
+      &lt;li&gt;也可以使用 &lt;code&gt;⌘ + 数字键&lt;/code&gt; 快速打开对应的文件或者目录。&lt;/li&gt;
+      &lt;li&gt;在选中的文件或者目录上点击 &lt;code&gt;fn&lt;/code&gt; 键可以触发其 &lt;strong&gt;额外的操作&lt;/strong&gt;，配置参考。
+&lt;img src=&quot;/img/articles/alfred/QQ20160731-2@2x.jpg&quot; alt=&quot;QQ20160730-1@2x&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;在对应的 &lt;em&gt;文件&lt;/em&gt; 上使用 &lt;code&gt;⌘ + 回车键&lt;/code&gt; 可以 &lt;strong&gt;进入当前文件所在的文件夹中&lt;/strong&gt;。 &lt;/li&gt;
+      &lt;li&gt;Alfred 同时也支持「&lt;strong&gt;模糊搜索&lt;/strong&gt;」，自然能够有效地匹配到对应的搜索内容。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/normal_search.gif&quot; alt=&quot;normal_search&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 也支持对应用程序的搜索。
+    &lt;ul&gt;
+      &lt;li&gt;注意：需要检查 &lt;code&gt;/Applications&lt;/code&gt; 是否在之前的 Alfred 的可搜索域的配置目录中。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/app.gif&quot; alt=&quot;app&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;web-&quot;&gt;Web 搜索&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Alfred 内置了非常多的快捷搜索，可以快速搜索互联网信息。&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;如下图 1 所标志的地方，在 Alfred 中输入 &lt;code&gt;amazon&lt;/code&gt; 并敲击回车，然后输入对应的想要搜索的商品，便会自动在浏览器中打开 Amazon 并显示搜索结果。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;这样的配置还能够通过图中 2 所标志的按钮添加自定义的搜索项，图中添加了一个自定义的淘宝搜索快捷方式。这令我在购物的时候再也不用去加载淘宝首页然后被强行分散注意力了。&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/QQ20160731-0@2x.jpg&quot; alt=&quot;QQ20160731-0@2x&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 能够记忆你在 Alfred 中敲击过的 URL 并记录在本地数据库中，你下一次再输入 URL 的时候能够快速找到这个 URL。例如我曾经输入过 12306 的网址，而现在我只需要：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/12306.gif&quot; alt=&quot;12306&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 还能够在输入好内容之后通过点击 &lt;code&gt;⌃(Ctrl) + ↩︎（Enter）&lt;/code&gt; 组合键打开浏览器默认的搜索引擎进行搜索。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/search.gif&quot; alt=&quot;search&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-6&quot;&gt;计算器&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 也支持计算器计算可以简单地输入 &lt;code&gt;22 * 33&lt;/code&gt; 便能够计算出结果，敲击回车键之后能够自动保存到剪贴板中，方便快速复制和使用。&lt;/li&gt;
+  &lt;li&gt;Alfred 也支持复杂表达式的计算，但是需要使用 &lt;code&gt;=&lt;/code&gt; 作为开头，比如：&lt;code&gt;=log2(34) + sqrt(64/2*2^3)&lt;/code&gt; 表达式。
+    &lt;ul&gt;
+      &lt;li&gt;之前特喜欢用这个功能算账，表示很给力。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/math.gif&quot; alt=&quot;math&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;词典查询和通讯录查询&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 内置了词典查询并使用 Apple 自带的词典软件，可以通过 &lt;code&gt;define&lt;/code&gt; 和 &lt;code&gt;spell&lt;/code&gt; 两个关键词唤起。值得一提的是 &lt;code&gt;spell&lt;/code&gt; 能够帮你模糊拼写，有时候忘了单词怎么拼，可以使用它，感觉迷之好用。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/dictionary.gif&quot; alt=&quot;dictionary&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 也内置了通信录查询，联动 Apple 自带的通讯录，输入对应小伙伴的名词能够查看对应名片，还能够 Copy 对应的信息。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;snippets-&quot;&gt;剪切板和 Snippets 访问&lt;/h4&gt;
+
+&lt;p&gt;这个是 Alfred 非常有用的功能，建议大家在配置中选择自己的快捷键，并启动对图片和文件复制的缓存。Alfred 同时支持自定义的 Snippet （字符片段）能够将自己定义的文字通过关键词或者快捷键的方式插入到当前光标之后。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/QQ20160731-1@2x.jpg&quot; alt=&quot;QQ20160731-1@2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;对应的演示如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/copy.gif&quot; alt=&quot;copy&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-8&quot;&gt;系统功能&lt;/h4&gt;
+
+&lt;p&gt;Alfred 同时还支持快速锁屏幕、关机、清空回收站、休眠等快捷命令。我比较常用的推荐如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;lock&lt;/code&gt; 1s 锁屏，走，吃饭去 ~&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;empty&lt;/code&gt; 清空回收站，瞬间强迫症患者清爽了。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;eject&lt;/code&gt; 命令可以弹出磁盘、存储卡或者虚拟磁盘镜像，如 &lt;code&gt;.dmg&lt;/code&gt; 挂载后的磁盘。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对于临时的 &lt;code&gt;shell&lt;/code&gt; 命令，Alfred 可以在唤醒的输入框中输入 &lt;code&gt;&amp;gt;&lt;/code&gt; 字符来启动 &lt;code&gt;Terminal&lt;/code&gt; 以执行 &lt;code&gt;&amp;gt;&lt;/code&gt; 之后的命令字符串。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-9&quot;&gt;其它扩展&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alfred 原生支持 &lt;code&gt;1Passowrd&lt;/code&gt; 作为密码备忘的神器。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;workflows&quot;&gt;Workflows&lt;/h2&gt;
+
+&lt;h3 id=&quot;workflows-1&quot;&gt;使用 Workflows&lt;/h3&gt;
+
+&lt;p&gt;Workflows 是一种由自己或者互联网上的开发者为了提高日常效率而开发的自动化脚本以及程序。Workflows 可以在后面给出的资源站点上搜索找到，下载之后双击便可以自动安装到 Workflows 列表中。&lt;/p&gt;
+
+&lt;p&gt;Workflows 非常强大，在这里我陈列几个自己非常喜欢的，也是非常有助于提高日常效率的 Workflows 用于演示，而读者最好可以自挠痒点，找到或者设计属于自己的 Workflows。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;Chrome History&lt;/code&gt; 以及 &lt;code&gt;Chrome Bookmarks&lt;/code&gt; 可以用于搜索 Chrome 的收藏书签和历史记录（支持模糊搜索）。
+    &lt;ul&gt;
+      &lt;li&gt;注意，我自定义了唤醒 Chrome Bookmarks 的快捷键为 &lt;code&gt;Ctrl + Option + Command + B&lt;/code&gt; （全局优先级最高的快捷键，会覆盖程序内部的快捷键）&lt;/li&gt;
+      &lt;li&gt;下图展示了 Bookmarks 的应用，History 类似。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/articles/alfred/bookmarks.gif&quot; alt=&quot;bookmarks&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;Evernote&lt;/code&gt;：支持印象笔记的全局搜索。这功能很好很强大，能够帮助自己快速定位到具体的印象笔记的条目之上。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Mail.app Search&lt;/code&gt;：支持 Email Apple 自带的邮件应用的全局搜索。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Airdrop&lt;/code&gt;：快速打开 Mac 的 AirDrop 功能。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Dash&lt;/code&gt;：代码 Doc 文档全局快速搜索。妈妈再也不用担心我查 API 的速度很慢了。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Sublime Text Projects&lt;/code&gt;：自动搜索索引范围下的 Sublime Projects。开发者提速工具， 这个个人非常喜欢，直接就载入项目文件了，速度非常之快，绝不拖泥带水。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Relaunched&lt;/code&gt;：重启没有响应的程序。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Show Desktop&lt;/code&gt;：一键无窗口，浑身变轻松。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;TerminalFinder&lt;/code&gt;：Terminal 和 Finder 之间互相切换。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;workflows-2&quot;&gt;设计 Workflows&lt;/h3&gt;
+
+&lt;p&gt;Workflows 的设计可以参考官方开发者文档，以及 &lt;a href=&quot;http://myg0u.com/python/2015/05/23/tutorial-alfred-workflow.html&quot;&gt;这篇关于如何开发的文章&lt;/a&gt;。在这里就不赘述了。&lt;/p&gt;
+
+&lt;h3 id=&quot;workflows-&quot;&gt;Workflows 资源&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.alfredforum.com/&quot;&gt;Alfred 论坛&lt;/a&gt;：个人开发者开发的解决比较特别的问题的插件居多，可以比较容易的通过 &lt;code&gt;alfred + 问题关键词&lt;/code&gt; 在 Google 上搜到。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.alfredworkflow.com/&quot;&gt;Workflows 中文站&lt;/a&gt;：国人收藏的超多 Workflows，总有几款能够满足你。&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.alfredapp.com/workflows/&quot;&gt;Workflows 官方站点&lt;/a&gt;：官方推荐的「装机必备」系列 Workflows。&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.packal.org/&quot;&gt;Packal&lt;/a&gt;：官方推荐的 Workflows 分享站点。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-10&quot;&gt;最后&lt;/h2&gt;
+
+&lt;p&gt;由于篇幅长度的限制，部分内容的扩展和深度阅读可以从下面的参考文章中获悉。建议读者自己多多玩味一番这个激活并提高自己日常 Mac 上工作效率的神器，省时省力，让效率飞起来 ~&lt;/p&gt;
+
+&lt;h2 id=&quot;section-11&quot;&gt;参考文章&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sspai.com/34468&quot;&gt;Alfred 3.0 新版详解&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/19985861&quot;&gt;如何使用Alfred提升操作效率&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sspai.com/32979?preview&quot;&gt;从零开始学习 Alfred（上）：基础功能及设置&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/19986749&quot;&gt;从零开始学习 Alfred（下）：用Alfred大幅提升操作效率 - workflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sspai.com/27900/&quot;&gt;OS X 效率启动器 Alfred 详解与使用技巧&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 03 Aug 2016 00:00:00 +0800</pubDate>
+        <link>http://www.surfacew.com/tool/2016/08/03/Alfred/</link>
+        <guid isPermaLink="true">http://www.surfacew.com/tool/2016/08/03/Alfred/</guid>
+        
+        <category>efficient tools</category>
+        
+        
+        <category>tool</category>
+        
+      </item>
     
       <item>
         <title>在Sublime和WebStorm下使用Eslinter以及Airbnb规则集合</title>
@@ -655,46 +906,6 @@ preferences &amp;gt; Languages &amp;amp; Frameworks &amp;gt; JavaScript &amp;gt;
         
         
         <category>article</category>
-        
-      </item>
-    
-      <item>
-        <title>关于 KGraph 答辩</title>
-        <description>&lt;p&gt;KGraph 最终所呈现的，是一个残缺不全的弃子的形态。&lt;/p&gt;
-
-&lt;p&gt;答辩完毕后，心中存有些许阴霾。可以说真正让自己感觉沮丧的，不是老师的提问或故意的刁难，而是自己内心存有一种遗憾，一种没能够真正实现的遗憾。&lt;/p&gt;
-
-&lt;p&gt;说来，KGraph 也是我人生中真正用心去做的第一个项目，我那时以为提携上一堆人，拥有共同的志趣（这很难实现）就能够走向所谓的成功。但理想和现实的鸿沟，终究还是断裂了群人之间的纽带……&lt;/p&gt;
-
-&lt;p&gt;到头来，我也只能够感叹&lt;strong&gt;天时、地利、人和&lt;/strong&gt;之重要性。&lt;/p&gt;
-
-&lt;p&gt;有时候，我会觉得 KGraph 对我而言，最重要的贡献是把我引荐到了百度，以及期间对代码，对技术的热枕，但这些确乎又显得虚无而不实。到头来，近半年的努力所造就的 KGraph，根本算不上是什么成果，也不是什么教训，只是我人生中一次颇有趣的探索的经历，期间教会了我很多为人做事的道理。&lt;/p&gt;
-
-&lt;p&gt;我已经语无伦次了。&lt;/p&gt;
-
-&lt;p&gt;就只想说：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Too young, too weak, we are all like that, there will be a long way to go, stay silent till you are strong enough.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;客观现实&lt;/strong&gt;大于主观描述，&lt;strong&gt;事实成果&lt;/strong&gt;大于过程诉说。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;现在，答辩完毕了。
-最终为这个项目立了一块碑，上面刻下一行字：&lt;strong&gt;埋葬的不是遗憾，而是最后的稚气&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;SurfaceW
-于贝壳
-2014-12-02&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 02 Dec 2014 00:00:00 +0800</pubDate>
-        <link>http://www.surfacew.com/me/2014/12/02/KGraph/</link>
-        <guid isPermaLink="true">http://www.surfacew.com/me/2014/12/02/KGraph/</guid>
-        
-        <category>kgraph</category>
-        
-        
-        <category>me</category>
         
       </item>
     

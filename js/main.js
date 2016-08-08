@@ -1,30 +1,11 @@
-/* This is the main file for JS */
-// Function to change the header's bg.
-// function chooseBG() {
-// 	var header;
-// 	header = document.querySelector('.site-header');
-// 	header.style.background = 
-// 		'url("/img/index/0' + getRandomInt(1,6) +'.jpg")' + ' no-repeat center center';
-// 	header.style.backgroundSize = 'cover'; 
-// }
-
-// // Returns a random integer between min (included) and max (excluded)
-// // Using Math.round() will give you a non-uniform distribution!
-// function getRandomInt(min, max) {
-//   return Math.floor(Math.random() * (max - min)) + min;
-// }
-
-// window.onload = chooseBG;
-
-/* 
+/*
  * Timing API to monitor Page Performance
- * 
+ *
  * @Author: qingnan.yqn
  * @Date: 2016-02-24
  * @Last Modified by:
- * @Last Modified time: 
+ * @Last Modified time:
  */
-
 (function () {
 
   'use strict'
@@ -62,17 +43,17 @@
     window.onload = function () {
       fb.resp = range(timing.responseEnd - timing.navigationStart, timeRanges);
       fb.load = range(timing.domComplete - startTime, timeRanges);
-    } 
+    }
   } else {
     window.onload = function () {
       fb.load = range(new Date().getTime() - startTime, timeRanges);
     }
   }
-  
+
   /**
    * Call manually while all services are ready to
    * to record the ready time.
-   * 
+   *
    * @param  {String} nw | fis | va_mb | va_pc | hx]
    */
   window._services_all_ready = function (from) {

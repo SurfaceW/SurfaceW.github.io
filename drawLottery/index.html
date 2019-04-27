@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="data-spm" content="a1zau">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="dns-prefetch" href="//g.alicdn.com" />
+  <link rel="dns-prefetch" href="//at.alicdn.com" />
+  <link rel="dns-prefetch" href="//img.alicdn.com" />
+  <link rel="dns-prefetch" href="//g-assets.daily.taobao.net" />
+  <title>UCan大会抽奖系统</title>
+
+    <!--[if lte IE 9]>
+  <script src="//g.alicdn.com/platform/c/??es5-shim/4.1.12/es5-shim.min.js,es5-shim/4.1.12/es5-sham.min.js,console-polyfill/0.2.1/index.min.js"></script>
+  <![endif]-->
+
+
+
+  <!-- 基础样式包 -->
+  <link rel="stylesheet" href="https://g.alicdn.com/platform/common/s/1.1/global/global.css"/>
+
+    <!-- 组件依赖配置 css -->
+    <link rel="stylesheet" id="" href="//g.alicdn.com/legao-comp/ucan_lottery/1.0.2/web.css?t=1f">
+
+
+
+    <script>
+      window.AliMonitor = {
+        config: {
+          modules: {
+            monitor: {
+              error: false,
+              request: {
+                urlClassifier: function (url) {
+                  var urlPrefix = "https://go.alibaba-inc.com";
+                  if (~url.indexOf(urlPrefix)) {
+                    return url;
+                  }
+                  return null;
+                }
+              }
+            }
+          }
+        }
+      };
+    </script>
+
+</head>
+<body class="zh-cn" data-spm="__spa__"><script async src="//g.alicdn.com/platform/common/s/1.1/monitor/index.js" id="tb-beacon-aplus" exparams=""></script>
+
+<div id="App">
+    <style>
+    .preview-page-loading {
+      width: 48px;
+      height: 48px;
+      background: url('https://g.alicdn.com/uxcore/pic/loading.svg') center no-repeat;
+      background-size: contain;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -24px;
+      margin-left: -24px;
+    }
+
+    /* IE9+ CSS HACK */
+    @media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio:0.75),screen and (min-width:0\0) and (min-resolution:72dpi) {
+      .preview-page-loading {
+        background-image:url(https://g.alicdn.com/uxcore/pic/loading-s.gif)
+      }
+    }
+
+  </style>
+
+
+  <div class="preview-page-loading"></div>
+</div>
+<script crossorigin="anonymous" src="//g.alicdn.com/platform/daily-test/isDaily.js"></script>
+<script crossorigin="anonymous" src="//g.alicdn.com/platform/c/??react/15.6.2/react-with-addons.min.js,react/15.6.2/react-dom.min.js,react-router/2.5.1/umd/ReactRouter.min.js,lie/3.0.2/dist/lie.polyfill.min.js,lodash/4.6.1/lodash.min.js,jquery/1.11.3/dist/jquery.min.js,immutable/3.7.6/dist/immutable.min.js,highcharts/5.0.12/highcharts.js,highcharts/5.0.12/highcharts-more.js,highcharts/5.0.12/modules/map.js,highcharts/5.0.12/modules/funnel.js,natty-storage/2.0.2/dist/natty-storage.min.js,natty-fetch/2.6.0/dist/natty-fetch.pc.min.js,tinymce/4.2.5/tinymce-full.js"></script>
+
+<!-- 页面配置 -->
+<script>
+  if (window.__isDaily) {
+    window.alert('系统检测到您的电脑有 g.alicdn.com 的 HOST 绑定，请联系开发或 IT 删除后再访问！');
+  }
+  window.g_config = {
+    schema: '',
+    id: 'App',
+    appKey: 'ucan_lottery',
+    subAppKey: '0.1.0',
+    routerBaseName: '/ucan_lottery',
+    __ali_config: {
+      corpId: 'dingd8e1123006514592',
+    },
+    autoRender: true,
+
+    fetchUrl: '',
+    routerParamsKey: '["setting","version","debug"]', // ['version', 'debug']
+    globalProps: {
+      ImageField: {
+        name: 'uploadInput',
+        url: 'https://go.alibaba-inc.com/query/attach/uploadImage.json',
+        corpId: 'dingd8e1123006514592'
+      },
+      AttachmentField: {
+        name: 'uploadInput',
+        url: 'https://go.alibaba-inc.com/query/attach/upload.json'
+      },
+      EditorField: {
+        name: 'uploadInput',
+        url: 'https://go.alibaba-inc.com/query/attach/upload.json'
+      },
+      EmployeeField: {
+        url: 'https://go.alibaba-inc.com/query/userservice/searchUserList.json',
+        corpId: 'dingd8e1123006514592'
+      },
+      EmployeeSelectField: {
+        url: 'https://go.alibaba-inc.com/query/userservice/searchUserList.json',
+        corpId: 'dingd8e1123006514592'
+      }
+    },
+    navTheme: '',
+  };
+
+  window.pageConfig = {
+    env: 'prod',
+    multiTheme: false,
+    locale: 'zh_CN',
+    appType: 'ucan_lottery',
+    device: 'web',
+    deviceType: 'web',
+    componentType: 'DEEP',
+    domainCode: 'DEEP',
+    urlPrefix: "https://go.alibaba-inc.com",
+    APIUrlPrefix: "https://go.alibaba-inc.com",
+    devVersion: '0.1.0',
+    adminExtConfig: {},
+    appMode: 'back', // 历史遗留问题, 这个是微应用的
+    loginUserId: '108546',
+    isAppAdmin: 'y',
+    versions: {
+      '@ali/render-engine': '6.0.2',
+      '@ali/visualengine': '3.2.2',
+      '@ali/vu-style-pack': '10.0.1',
+      '@ali/vu-navigation': '8.4.0',
+    },
+    isDomainPkg: 'n',
+    useReleaseBundle: 'n',
+    domainReVersion: '',
+    domainWebAppKey: 'SWWsip-web',
+    domainBundleVersion: '1.0.88',
+    domainPublishVersion: '',
+  };
+
+  // RE依赖的国际化标志, 历史兼容
+  window.__LOCALE__ = 'zh_CN';
+  window.navUuid = '';
+  window.appName = 'UCan大会抽奖系统';
+</script>
+<!-- 此处的 __navId 是为了兼容 Re4 -->
+<script crossorigin="anonymous" src="//g.alicdn.com/legao/ucan_lottery/1.0.2/app.js"></script>
+<!-- 引入RE资源 -->
+<script crossorigin="anonymous" src="//g.alicdn.com/vision/render-engine/6.0.2/render-engine.min.js"></script>
+<!-- 组件依赖 & 页面入口 -->
+<script crossorigin="anonymous" src="//g.alicdn.com/legao-comp/ucan_lottery/1.0.2/web.js?t=1f"></script>
+
+
+
+<div id="page_bottom"></div>
+<input name='_tb_token_' type='hidden' value="2CFnx4vq">
+<!-- hostName: vision-render-server011131158190.na62-->
+<!-- Powered by 乐高 go.alibaba-inc.com -->
+</body>
+</html>
